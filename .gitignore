@@ -1,0 +1,6 @@
+
+
+# Ignore DevSpace cache and log folder
+.devspace/
+kind-config.yaml
+models/ggml-small.bin

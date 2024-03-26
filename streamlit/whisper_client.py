@@ -6,10 +6,13 @@ import ffmpeg
 st.set_page_config(page_title="Whisper Speech Recognition", page_icon=":studio_microphone:")
 st.title(":studio_microphone: Speech Recognition")
 st.markdown("Upload an audio file you wish to have translated")
-endpoint = os.getenv("MODEL_ENDPOINT", default="http://0.0.0.0:8001/inference")
+model_endpoint=os.getenv('MODEL_ENDPOINT')
+namespace=os.getenv('NAMESPACE')
+ep_default=f'http://{model_endpoint}.{namespace}.svc.cluster.local:8001/inference'
+endpoint = os.getenv("MODEL_ENDPOINT_OVERRIDE", default=ep_default)
 audio = st.file_uploader("", type=["wav"], accept_multiple_files=False)
 # read audio file
-if audio:
+if audio:   
     audio_bytes = audio.read()
     st.audio(audio_bytes, format='audio/wav', start_time=0)
     files = {'file': audio_bytes}
