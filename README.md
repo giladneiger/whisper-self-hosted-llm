@@ -12,6 +12,31 @@ on any other externally hosted services.
 Project design
 ![alt text](design.png)
 
+## Requirements
+* Docker installed
+* Kind installed
+* Helm installed
+
+## Prepare environment
+Run the following script to build the whisper and streamlit docker images, and download the Whisper model binary:
+```
+./build-images.sh
+```
+
+## (Mac users) prepare your mac
+Run the following script to prepare your mac for running the model:
+```
+./mac-prerequisites.sh
+```
+- Remember to edit the kind-config-example.yaml with the right path to the downloaded model binary 
+
+## Self-host Whisper!
+Run the following script to provision a kind cluster and deploy 
+```
+./self-host-install.sh
+```
+
+
 ## Setting up LLMs via Self-Hosting
 The discussion surrounding LLMs has evolved, transitioning from "Should we utilize LLMs?" to "Should we opt for a self-hosted solution or rely on a proprietary off-the-shelf alternative?" Depending on your use-case, computational needs and engineering architecture availabilities you can decide whether to self-host your LLM.
 
