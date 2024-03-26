@@ -9,14 +9,8 @@ This repo contains artifacts that can be used to build and run the [Whisper LLM]
 These containerized LLM services can be used to help developers quickly prototype new LLM based applications, without the need for relying
 on any other externally hosted services.
 
-## Introduction to LLMs
-
-A Large Language Model is a type of Artificial Intelligence that is trained on a massive dataset of text and code. This allows the model to learn statistical relationships between words and phrases which in turn allows it to generate text, translate languages, write creative content and answer your questions in an informative way.
-
-Some common LLMs:
-* GPT3.5, GPT4
-* Gemini
-* Llama, Llama2
+Project design
+![alt text](design.png)
 
 ## Setting up LLMs via Self-Hosting
 The discussion surrounding LLMs has evolved, transitioning from "Should we utilize LLMs?" to "Should we opt for a self-hosted solution or rely on a proprietary off-the-shelf alternative?" Depending on your use-case, computational needs and engineering architecture availabilities you can decide whether to self-host your LLM.
