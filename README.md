@@ -36,6 +36,11 @@ Run the following script to provision a kind cluster and deploy
 ./self-host-install.sh
 ```
 
+## Convert to WAV using ffmpeg
+To convert your audio file to the required WAV file, run the following command (requiring ffmpeg installed):
+```
+ffmpeg -i jqday.m4a -acodec pcm_s16le -ar 16000 jqday.wav
+```
 
 ## Setting up LLMs via Self-Hosting
 The discussion surrounding LLMs has evolved, transitioning from "Should we utilize LLMs?" to "Should we opt for a self-hosted solution or rely on a proprietary off-the-shelf alternative?" Depending on your use-case, computational needs and engineering architecture availabilities you can decide whether to self-host your LLM.
