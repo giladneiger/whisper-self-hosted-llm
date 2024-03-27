@@ -3,7 +3,7 @@ import requests
 import os
 import ffmpeg
 
-st.set_page_config(page_title="Whisper Speech Recognition", page_icon=":studio_microphone:")
+st.set_page_config(page_title="Whisper Speech Recognition",     page_icon=":studio_microphone:")
 st.title(":studio_microphone: Speech Recognition")
 st.markdown("Upload an audio file you wish to have translated")
 model_endpoint=os.getenv('MODEL_ENDPOINT')
